@@ -25,7 +25,7 @@ app.post('/callback', (req, res) => {
   socketIO.emit('updateDevices', getDeviceStatusList());
 
   setTimeout(() => {
-    res.send('OK');
+    res.status(200).send('OK');
   }, 33000);
 });
 
