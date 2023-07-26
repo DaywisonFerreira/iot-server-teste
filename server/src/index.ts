@@ -38,7 +38,7 @@ app.get('/status', (req, res) => {
     res.status(400).json({ message: `Serial number is required.` });
     return;
   }
-  
+
   const deviceNumber = serialNumber.toString();
   const device = devicesList[deviceNumber];
   if (!device) {
@@ -46,8 +46,8 @@ app.get('/status', (req, res) => {
     return;
   }
 
-  const online = Date.now() - device < TEN_SECONDS;
-  res.status(200).json({ online });
+  const status = Date.now() - device < TEN_SECONDS ? 'online' : 'offline';
+  res.status(200).json({ status });
 });
 
 function getDeviceStatusList() {

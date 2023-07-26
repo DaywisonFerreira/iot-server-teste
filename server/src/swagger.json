@@ -56,8 +56,8 @@
                 "schema": {
                   "type": "object",
                   "properties": {
-                    "online": {
-                      "type": "boolean",
+                    "status": {
+                      "type": "string",
                       "description": "Indica se o dispositivo está online ou offline."
                     }
                   }
