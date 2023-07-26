@@ -1,7 +1,7 @@
 # Dashboard
 ![Exemplo](images/example.gif)
 
-# IoT Device Server and Simulator
+# Sobre
 Este é um projeto para desenvolver um servidor para dispositivos IoT, um simulador de dispositivo IoT e uma aplicação frontend para exibir os dispositivos online/offline.
 
 ## 🚀 Começando
@@ -31,13 +31,17 @@ O servidor backend estará acessível em http://localhost:4000 e o frontend em h
 ### Servidor para Dispositivos IoT
 O servidor possui as seguintes rotas:
 
+```
 POST /callback: Recebe uma requisição nesta rota, considerando o dispositivo como "online" e responde 'OK' após 33 segundos.
+```
 
+```
 GET /status?serialNumber=xxx: Responde se o dispositivo está online/offline.
-
+```
 OBS: Se o dispositivo deixar de se comunicar, após 10 segundos é considerado como "offline".
 
-Documentação da API: Você pode acessar a documentação da API através do Swagger em http://localhost:4000/api-docs/.
+### 📜 Documentação API
+Você pode acessar a documentação da API através do Swagger em http://localhost:4000/api-docs/.
 
 ### Made with :heart: by Daywison Leal
 -  [LinkedIn](https://www.linkedin.com/in/daywison-leal/)
