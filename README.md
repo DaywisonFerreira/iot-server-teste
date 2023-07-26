@@ -1,3 +1,6 @@
+# Dashboard
+![Exemplo](images/example.gif)
+
 # IoT Device Server and Simulator
 Este é um projeto para desenvolver um servidor para dispositivos IoT, um simulador de dispositivo IoT e uma aplicação frontend para exibir os dispositivos online/offline.
 
