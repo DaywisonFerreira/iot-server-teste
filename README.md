@@ -21,7 +21,7 @@ cd iot-server-teste
 ```
 3. Execute o seguinte comando para rodar o projeto:
 ```
-docker-compose up
+docker-compose up -d
 ```
 Isso iniciará os contêineres do servidor backend e do frontend da aplicação.
 
