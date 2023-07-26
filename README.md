@@ -39,11 +39,5 @@ OBS: Se o dispositivo deixar de se comunicar, após 10 segundos é considerado c
 
 Documentação da API: Você pode acessar a documentação da API através do Swagger em http://localhost:4000/api-docs/.
 
-### Simulador de Dispositivo IoT
-O simulador de dispositivo IoT 'pinga' no servidor continuamente, realizando uma chamada HTTP para a rota /callback do servidor, informando seu número de série.
-
-Exemplo de chamada:
-```
-POST http://localhost:4000/callback
-Body {"serialNumber":"D8307AA43527"}
-```
+### Made with :heart: by Daywison Leal
+-  [LinkedIn](https://www.linkedin.com/in/daywison-leal/)
