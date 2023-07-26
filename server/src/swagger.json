@@ -1,0 +1,90 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "API de simulação de IoT",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:4000",
+      "description": "API de teste"
+    }
+  ],
+  "paths": {
+    "/callback": {
+      "post": {
+        "summary": "Atualização de dispositivo IoT",
+        "description": "Essa rota será responsável por receber os status dos dispositivos IoT",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Device"
+              },
+              "examples": {
+                "device": {
+                  "value": {
+                    "serialNumber": "D8307AA40013"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/status": {
+      "get": {
+        "description": "Retorna o status de um dispositivo IoT",
+        "summary": "Retorna o status de um dispositivo IoT",
+        "parameters": [{
+          "name": "serialNumber",
+          "in": "query",
+          "description": "O número de série do dispositivo.",
+          "required": true
+        }],
+        "responses": {
+          "200": {
+            "description": "Retorna o status do dispositivo.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "online": {
+                      "type": "boolean",
+                      "description": "Indica se o dispositivo está online ou offline."
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Serial number is required."
+          },
+          "404": {
+            "description": "Device not found."
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Device": {
+        "type": "object",
+        "properties": {
+          "serialNumber": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
