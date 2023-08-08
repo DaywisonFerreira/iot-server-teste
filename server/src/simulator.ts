@@ -37,10 +37,8 @@ function getRandomDevice(): string {
 }
 
 function simulateMultipleDevices(): void {
-  for (let i: number = 0; i < 5; i++) {
-    const device: string = getRandomDevice();
-    simulateDevice(device);
-  }
+  const device: string = getRandomDevice();
+  simulateDevice(device);
 }
 
 setInterval(simulateMultipleDevices, 1000);
