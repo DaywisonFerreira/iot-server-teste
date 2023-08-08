@@ -19,24 +19,18 @@ git clone https://github.com/DaywisonFerreira/iot-server-teste.git
 ```
 cd iot-server-teste
 ```
-3. Navegue até o diretório do servidor:
+3. Abra o terminal e navegue até o diretório do servidor e execute os comandos abaixo para instalar as dependências e iniciar o servidor e simulador:
 ```
 cd server
-```
-4. Abra o terminal e execute os comandos abaixo para instalar as dependências e iniciar o servidor e simulador:
-```
 npm i
 npm run all
 ```
-
-5. Para iniciar o front end da aplicação navegue até a pasta client e execute os comandos:
+4. Para iniciar o front end da aplicação abra outro terminal e navegue até a pasta client e execute os comandos:
 ```
-cd ..
 cd client
 npm i
 npm start
 ```
-
 Isso iniciará o servidor backend o simulador e o frontend da aplicação.
 
 O servidor backend estará acessível em http://localhost:4000 e o frontend em http://localhost:3000.
@@ -55,7 +49,9 @@ GET /status?serialNumber=xxx: Responde se o dispositivo está online/offline.
 OBS: Se o dispositivo deixar de se comunicar, após 10 segundos é considerado como "offline".
 
 ### 📜 Documentação API
-Você pode acessar a documentação da API através do Swagger em http://localhost:4000/api-docs/.
+Acesse o endpoint http://localhost:4000/api-docs/ para interagir com a aplicação.
+
+![Swagger](images/swagger.png)
 
 ### Made with :heart: by Daywison Leal
 -  [LinkedIn](https://www.linkedin.com/in/daywison-leal/)
