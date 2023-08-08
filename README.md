@@ -19,11 +19,25 @@ git clone https://github.com/DaywisonFerreira/iot-server-teste.git
 ```
 cd iot-server-teste
 ```
-3. Execute o seguinte comando para rodar o projeto:
+3. Navegue até o diretório do servidor:
 ```
-docker-compose up -d
+cd server
 ```
-Isso iniciará os contêineres do servidor backend e do frontend da aplicação.
+4. Abra o terminal e execute os comandos abaixo para instalar as dependências e iniciar o servidor e simulador:
+```
+npm i
+npm run all
+```
+
+5. Para iniciar o front end da aplicação navegue até a pasta client e execute os comandos:
+```
+cd ..
+cd client
+npm i
+npm start
+```
+
+Isso iniciará o servidor backend o simulador e o frontend da aplicação.
 
 O servidor backend estará acessível em http://localhost:4000 e o frontend em http://localhost:3000.
 
